@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salud Pulmonar | Tuberculosis</title>
+
+    <style>
+        :root {
+            --primary: #0b3d91;
+            --secondary: #2a64ad;
+            --accent: #e63946;
+            --bg: #f4f7f9;
+            --text: #334155;
+            --white: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            position: relative;
+            text-align: center;
+            color: white;
+            height: 300px; /* Reducido un poco para no empujar demasiado el contenido */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #000;
+        }
+
+        header img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.5;
+        }
+
+        header h1 {
+            position: relative;
+            font-size: 3rem;
+            text-shadow: 2px 2px 15px rgba(0,0,0,0.7);
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        main {
+            max-width: 1100px;
+            /* CAMBIO CLAVE: Quitamos el margen negativo y ponemos uno positivo */
+            margin: 50px auto 60px; 
+            padding: 0 1.5rem;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e2e8f0;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 2rem;
+            flex-grow: 1;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: var(--primary);
+            font-size: 1.4rem;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+            list-style: none;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        ul li::before {
+            content: "-";
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.5rem;
+            position: absolute;
+            left: -1.2rem;
+            top: -7px;
+        }
+
+        .info-banner {
+            background: var(--white);
+            border-left: 6px solid var(--primary);
+            color: var(--text);
+            padding: 2.5rem;
+            border-radius: 12px;
+            margin-top: 3rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .info-banner h3 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8rem; }
+            main { margin-top: 30px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="https://www.scielo.cl/fbpe/img/rchradiol/v10n4/pag179fig1.jpg" alt="Radiografía de tórax">
+        <h1>Tuberculosis Pulmonar</h1>
+    </header>
+
+    <main>
+        
+
+        <div class="grid-container">
+            
+            <div class="card">
+                <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/7/71/Mycobacterium_tuberculosis_Ziehl-Neelsen_stain_02.jpg" alt="Bacterias bajo microscopio">
+                <div class="card-content">
+                    <h2>La Bacteria</h2>
+                    <p>Causada por el bacilo <strong>Mycobacterium tuberculosis</strong>. Es una bacteria resistente que se aloja en los alvéolos pulmonares, donde el sistema inmune intenta contenerla formando granulomas.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="https://www.cdc.gov/tb/media/images/Health_Care_Provider_showing_xray_1200x675.jpg" alt="Consulta médica">
+                <div class="card-content">
+                    <h2>Síntomas de Alerta</h2>
+                    <ul>
+                        <li>Tos persistente con flema</li>
+                        <li>Dolor torácico agudo</li>
+                        <li>Presencia de sangre al toser</li>
+                        <li>Pérdida de peso drástica</li>
+                        <li>Sudoración profusa de noche</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="https://www.adherencia-cronicidad-pacientes.com/wp-content/uploads/2018/03/Recurso-tratamiento.jpg" alt="Tratamiento">
+                <div class="card-content">
+                    <h2>Tratamiento</h2>
+                    <p>El protocolo suele incluir una combinación de fármacos (como isoniazida y rifampicina). La clave es la <strong>adherencia estricta</strong> para no generar multirresistencia.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="info-banner">
+            <h3>Importancia del Diagnóstico</h3>
+            <p>La tuberculosis se transmite por el aire. Un paciente sin tratamiento puede infectar a 10-15 personas al año. Si presentas síntomas, la baciloscopía es un examen rápido y efectivo.</p>
+        </div>
+    </main>
+</body>
+
+</html>
